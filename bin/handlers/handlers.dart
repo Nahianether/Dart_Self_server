@@ -6,6 +6,8 @@ import 'all_api/get_all_iteam_list.dart';
 import 'all_api/get_all_tables.dart';
 import 'all_api/get_token_number.dart';
  import 'all_api/get_voucher_serial_number.dart';
+import 'all_api/post_draft_order.dart';
+import 'all_api/post_save_order.dart';
 import 'all_api/post_signup.dart';
 import 'all_api/post_signin.dart';
 // import 'auth/signin.dart' show signInHandler;
@@ -27,6 +29,6 @@ final handlers = Router()
   ..get('/api/v1/voucher/serial', getVoucherSerialNumberHandler)
   ..get('/api/v1/orders/token', getTokenNumberHandler)
   ..post('/api/v1/login', postSignInHandler)
-  ..post('/api/v1/register', postSignUpHandler);
-  //..post('/api/v1/orders/draft', getTokenNumberHandler)
-  //..post('/api/v1/orders', getTokenNumberHandler);
+  ..post('/api/v1/register', postSignUpHandler)
+  ..post('/api/v1/orders/draft', postDraftOrderHandler)
+  ..post('/api/v1/orders', postSaveOrderHandler);
